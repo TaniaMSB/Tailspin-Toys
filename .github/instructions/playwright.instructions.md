@@ -5,6 +5,10 @@ applyTo: '**/*.spec.ts'
 
 # Test Writing Guidelines
 
+Use [`coding-standards.instructions.md`](coding-standards.instructions.md) for
+comment intent and TypeScript formatting. Comments in tests should explain
+non-obvious test setup or product decisions, not repeat the test steps.
+
 ## Code Quality Standards
 
 - **Locators**: Prioritize user-facing, role-based locators (`getByRole`, `getByLabel`, `getByText`, etc.) for resilience and accessibility. Use `test.step()` to group interactions and improve test readability and reporting.

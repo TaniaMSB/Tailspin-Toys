@@ -7,6 +7,9 @@ applyTo: '**/*.{astro,css}'
 
 ## Tailwind CSS v4 Configuration
 
+Use the shared comment and formatting conventions in
+[`coding-standards.instructions.md`](coding-standards.instructions.md).
+
 This project uses Tailwind CSS v4.1.14 via the `@tailwindcss/vite` plugin.
 
 ### Global CSS Setup
