@@ -5,6 +5,9 @@ applyTo: 'db/**/*.ts,src/lib/*.ts'
 
 # Drizzle ORM + Node SQLite Instructions
 
+Follow [`coding-standards.instructions.md`](coding-standards.instructions.md)
+for comment intent and TSDoc requirements.
+
 The app's data lives in a local SQLite database accessed through **Drizzle ORM** over Node.js's built-in `node:sqlite` driver. It is consumed at **build time** from Astro page frontmatter — there is no runtime API server. Schema changes are managed with **drizzle-kit** migrations.
 
 ## Layout
@@ -54,6 +57,8 @@ export async function getAllGameIds(db: Database): Promise<number[]> {
 - Always `order by` a stable column (title) so static builds are deterministic.
 - Map raw rows to the app-facing `Game`/`Publisher`/`Category` types in one place; don't leak Drizzle row shapes into components.
 - Keep ordering/lookup logic in `games.ts`, not in pages.
+- Document every exported function with TSDoc/JSDoc describing its purpose,
+  parameters, injectable `db` argument when present, and return value.
 
 ## Determinism
 

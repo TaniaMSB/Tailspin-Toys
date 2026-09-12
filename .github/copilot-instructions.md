@@ -11,6 +11,9 @@ This is a crowdfunding platform for games with a developer theme. The applicatio
 - Do not generate summary markdown files upon completion of a task
 - Always use absolute paths when running scripts and BASH commands
 - **NEVER commit or push to main automatically unless explicitly instructed to do so**
+- Follow [coding-standards.instructions.md](instructions/coding-standards.instructions.md)
+  for comments, public API documentation, component contracts, and TypeScript
+  formatting.
 
 ## Code standards
 
@@ -36,6 +39,13 @@ This is a crowdfunding platform for games with a developer theme. The applicatio
 
 - Use TypeScript with explicit types for function parameters and return values, especially in the data layer (`db/`, `src/lib/`)
 - Frontend code (TypeScript, Astro) must pass ESLint checks (`npm run lint`)
+- Comment intent and decisions, not mechanics; keep comments current and avoid
+  restating code.
+- Add TSDoc/JSDoc to every exported function in `db/` and `src/lib/`, including
+  its parameters and return value.
+- Document every reusable Astro component's `Props` interface and its props.
+- Follow the repository's four-space indentation, single-quote, semicolon, and
+  multiline trailing-comma conventions.
 
 ### Data Layer Patterns (Drizzle + Node SQLite)
 

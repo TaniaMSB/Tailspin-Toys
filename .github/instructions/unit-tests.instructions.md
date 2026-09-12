@@ -5,6 +5,10 @@ applyTo: '**/*.test.ts'
 
 # Unit Testing Guidelines (Vitest + Drizzle/Node SQLite)
 
+Follow [`coding-standards.instructions.md`](coding-standards.instructions.md)
+for comment intent and TypeScript formatting. Test comments should explain
+non-obvious setup or a product decision, not repeat the assertion or test step.
+
 Unit tests run with **Vitest** (`npm run test:unit`). They cover the two highest-value, framework-free layers:
 
 1. **Pure transforms** (`db/transforms.ts`) — CSV parsing, description building, de-duplication, deterministic ratings.
